@@ -21,8 +21,8 @@ public class MoodAnalyzerTest {
 
     @Test
     public void toAnalayseMoodTestToNull(){
-        moodAnalyzer = new MoodAnalyzer("Null Mood");
-        Assertions.assertEquals("HAPPY",moodAnalyzer.analysemessage());
+        moodAnalyzer = new MoodAnalyzer(null);
+        Assertions.assertEquals("HAPPY",moodAnalyzer.toAnalyzeThenullMood());
     }
 
 

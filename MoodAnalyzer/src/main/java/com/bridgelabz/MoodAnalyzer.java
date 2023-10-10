@@ -13,18 +13,20 @@ public class MoodAnalyzer {
     }
 
     public  String analysemessage() {
-        if (this.message.equals("I am in Sad Mood") || this.message.equals("I am in Happy Mood")){
+        if (this.message.equals("I am in Sad Mood") || this.message.equals("I am in Happy Mood")) {
             return "SAD";
         }
+        return null;
+    }
 
+    public String toAnalyzeThenullMood(){
             try {
-                if (this.message.equals("Null Mood")) {
-                    throw new NullPointerException("Invalid Input");
+                if (this.message.equals(null)) {
+                    throw new NullPointerException();
                 }
-            } catch (Exception e) {
+            } catch (NullPointerException e) {
                 System.out.println("Invalid Input"+e);
                 e.printStackTrace();
-
             return "HAPPY";
         }
         return null;
